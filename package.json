@@ -1,0 +1,30 @@
+{
+  "name": "Npage",
+  "version": "1.0.0",
+  "description": "N navigation",
+  "author": "infiniteSky",
+  "private": true,
+  "scripts": {
+    "test": "ava",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "ant-design-vue": "^1.1.10",
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/pwa": "^2.6.0",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "ava": "^2.2.0",
+    "browser-env": "^3.2.5",
+    "mdui": "^0.4.3",
+    "nodemon": "^1.18.9",
+    "require-extension-hooks": "^0.3.3",
+    "require-extension-hooks-babel": "^1.0.0",
+    "require-extension-hooks-vue": "^2.0.0"
+  }
+}
