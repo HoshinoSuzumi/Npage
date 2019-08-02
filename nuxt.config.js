@@ -22,7 +22,9 @@ export default {
   ** Global CSS
   */
   css: [
-    'ant-design-vue/dist/antd.css'
+    'ant-design-vue/dist/antd.css',
+    'mdui/dist/css/mdui.min.css',
+    '@/assets/css/npage.css'
   ],
   /*
   ** Plugins to load before mounting the App
