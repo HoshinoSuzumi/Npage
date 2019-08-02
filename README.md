@@ -28,6 +28,10 @@ $ npm run start
 
 * [ ] 使用localStorage存储书签和设置
 
+* [ ] Todo list
+
+* [ ] 天气信息
+
 * [ ] 书签和设置云同步
 
 * [ ] 高级搜索
