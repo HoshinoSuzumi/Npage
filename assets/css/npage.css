@@ -1,5 +1,6 @@
 html, body {
   background: #f4f8fb;
+  font-family: Roboto, 'Microsoft JhengHei', sans-serif;
 }
 
 input::-webkit-input-placeholder {
@@ -37,10 +38,7 @@ input:-ms-input-placeholder {
 
 .np-search:focus {
   outline: none;
-  /*background-color: #249ffd;*/
   transform: scale(1.02);
-  /*box-shadow: 0 0.5rem 0.625rem rgba(36, 159, 253, .3);*/
-  /*box-shadow: 0 0.5rem 0.625rem rgba(0, 0, 0, .1);*/
   box-shadow: 0.5rem 0.875rem 2.375rem rgba(39, 44, 49, .09), 0.0625rem 0.1875rem 0.5rem rgba(39, 44, 49, .06);
 }
 

@@ -1,11 +1,15 @@
 <template>
-  <div class="mdui-col-xs-3 mdui-col-sm-2 mdui-col-md-1 np-label" @click="(plus === '') ? null : open(url)">
-    <button class="close" v-if="plus !== ''" onclick="console.log(this)"></button>
+  <div class="mdui-col-xs-3 mdui-col-sm-2 mdui-col-md-1 np-label" @click="(plus === '') ? add() : open(url)">
+    <button class="close" :id="title" v-if="plus !== ''" @click="del($event)"></button>
     <a-avatar class="mdui-m-a-1 mdui-m-t-2" :size="64" :icon="(plus === '') ? 'plus' : ''"
               :style="{backgroundColor: (plus === '') ? '#c8c8c8' : color}">
       {{ title.slice()[0] }}
     </a-avatar>
-    <p>{{ (plus === '') ? '' : title }}</p>
+    <div style="display: flex; justify-content: center; align-content: center;">
+      <p class="mdui-text-truncate" style="max-width: 100px;">
+        {{ (plus === '') ? '' : title }}
+      </p>
+    </div>
   </div>
 </template>
 
@@ -19,11 +23,21 @@
             open(url) {
                 window.location.href = url;
             },
+            add() {
+                this.$store.commit('mkSite', {
+                    title: '0x' + new Date().getTime().toString(16).toUpperCase(),
+                    url: 'https://www.baidu.com/',
+                    color: '#3282F2'
+                })
+            },
+            del(el) {
+                this.$store.commit('rmSite', el.target.id);
+            }
         },
         mounted() {
             $('.np-label, .close').click(function (e) {
                 e.stopPropagation();
-            })
+            });
         }
     }
 </script>
@@ -40,7 +54,6 @@
   }
 
   .np-label:hover {
-    /*margin-top: -5px;*/
     transform: scale(1.05);
     box-shadow: 0.5rem 0.875rem 2.375rem rgba(39, 44, 49, .09), 0.0625rem 0.1875rem 0.5rem rgba(39, 44, 49, .06);
     box-sizing: border-box;
