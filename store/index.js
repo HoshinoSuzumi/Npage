@@ -8,8 +8,8 @@ export const state = () => ({
       {title: '百度', url: 'https://www.baidu.com/', color: '#3282F2'},
     ],
     settings: {
-      "immerseNavbar": false,
-      "autoSyncConfig": true,
+      "immerseNavbar": true,
+      "autoSyncConfig": false,
       "openTabNewWindow": true,
     },
   },
@@ -56,5 +56,5 @@ export const mutations = {
   },
   syncConfigWithLocalStorage(state, config) {
     localStorage.setItem('config', JSON.stringify(config));
-  }
+  },
 };

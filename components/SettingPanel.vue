@@ -12,7 +12,9 @@
             <i class="mdui-icon material-icons">cloud_queue</i>
           </div>
           <div class="setting-block-actions">
-            <a-switch style="margin-left: .25rem; margin-bottom: .25rem;"/>
+            <a-switch style="margin-left: .25rem; margin-bottom: .25rem;"
+                      :defaultChecked="$store.state.config.settings['autoSyncConfig']"
+                      @change="switchChanged('autoSyncConfig', $event)"/>
           </div>
         </div>
       </div>
@@ -25,7 +27,9 @@
             <i class="mdui-icon material-icons">desktop_windows</i>
           </div>
           <div class="setting-block-actions">
-            <a-switch style="margin-left: .25rem; margin-bottom: .25rem;"/>
+            <a-switch style="margin-left: .25rem; margin-bottom: .25rem;"
+                      :defaultChecked="$store.state.config.settings['immerseNavbar']"
+                      @change="switchChanged('immerseNavbar', $event)"/>
           </div>
         </div>
       </div>
@@ -38,7 +42,9 @@
             <i class="mdui-icon material-icons">label_outline</i>
           </div>
           <div class="setting-block-actions">
-            <a-switch style="margin-left: .25rem; margin-bottom: .25rem;"/>
+            <a-switch style="margin-left: .25rem; margin-bottom: .25rem;"
+                      :defaultChecked="$store.state.config.settings['openTabNewWindow']"
+                      @change="switchChanged('openTabNewWindow', $event)"/>
           </div>
         </div>
       </div>
@@ -75,6 +81,14 @@
         name: "SettingPanel",
         mounted() {
             mdui.mutation();
+        },
+        methods: {
+            switchChanged(tag, state) {
+                this.$store.commit('updateSetting', {
+                    key: tag,
+                    value: state,
+                });
+            },
         },
     }
 </script>

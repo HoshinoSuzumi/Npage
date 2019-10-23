@@ -41,16 +41,20 @@
                     }
                 }
                 if (kw !== null)
-                    window.open('https://www.baidu.com/s?wd=' + kw);
+                    this.$store.state.config.settings['openTabNewWindow']
+                        ? window.open('https://www.baidu.com/s?wd=' + kw)
+                        : window.location.href = 'https://www.baidu.com/s?wd=' + kw;
             }
         },
-        mounted() {
-            let self = this;
+        beforeCreate() {
             if (localStorage.getItem('config') === null) {
                 localStorage.setItem('config', JSON.stringify(this.$store.state.config));
             } else {
                 this.$store.commit('rewriteConfig', JSON.parse(localStorage.getItem('config')));
             }
+        },
+        mounted() {
+            let self = this;
 
             $('.np-search').keypress(function (e) {
                 if (e.which === 13) {

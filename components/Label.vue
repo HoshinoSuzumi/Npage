@@ -21,7 +21,7 @@
         props: ['title', 'color', 'url', 'plus'],
         methods: {
             open(url) {
-                window.location.href = url;
+                this.$store.state.config.settings['openTabNewWindow'] ? window.open(url) : window.location.href = url;
             },
             add() {
                 this.$store.commit('mkSite', {
