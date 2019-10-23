@@ -8,7 +8,8 @@ export const state = () => ({
       {title: '百度', url: 'https://www.baidu.com/', color: '#3282F2'},
     ],
     settings: {
-      "autoSyncConfig": false,
+      "immerseNavbar": false,
+      "autoSyncConfig": true,
       "openTabNewWindow": true,
     },
   },
@@ -51,7 +52,7 @@ export const mutations = {
     state.config = config
   },
   syncConfigWithCloudService(state) {
-    console.log('Features in development. Config will be synced: ' + state.config);
+    console.log('Features in development. Config will be synced: \n' + JSON.stringify(state.config, null, 4));
   },
   syncConfigWithLocalStorage(state, config) {
     localStorage.setItem('config', JSON.stringify(config));

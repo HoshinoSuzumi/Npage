@@ -26,7 +26,7 @@ $ npm run start
 
 * [x] 站点书签样式
 
-* [ ] 使用localStorage存储书签和设置
+* [x] 使用localStorage存储书签和设置
 
 * [ ] Todo list
 

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <NavBar/>
     <div class="main">
       <ContentArea title="Search">
         <div>
@@ -10,7 +11,7 @@
         </div>
       </ContentArea>
 
-      <ContentArea title="Websites">
+      <ContentArea title="Bookmarks">
         <div class="websites-container mdui-container-fluid">
           <Label v-for="(website, index) in $store.state.config.websites" :key="index" :title="website.title"
                  :color="website.color" :url="website.url"/>
@@ -26,10 +27,11 @@
     import ContentArea from "../components/ContentArea";
 
     import $ from 'jquery';
+    import NavBar from "../components/NavBar";
 
     export default {
         name: "index",
-        components: {Label, ContentArea},
+        components: {NavBar, Label, ContentArea},
         methods: {
             Search(kw) {
                 if (kw === null) {
