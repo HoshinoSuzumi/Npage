@@ -1,3 +1,5 @@
+import mdui from 'mdui';
+
 const API_BASE = 'https://n.boxmoe.cn/api';
 
 export const state = () => ({
@@ -8,7 +10,7 @@ export const state = () => ({
       {title: '百度', url: 'https://www.baidu.com/', color: '#3282F2'},
     ],
     settings: {
-      "immerseNavbar": true,
+      "immerseNavbar": false,
       "autoSyncConfig": false,
       "openTabNewWindow": true,
     },
@@ -50,6 +52,18 @@ export const mutations = {
   },
   rewriteConfig(state, config) {
     state.config = config
+  },
+  flushCache(state) {
+    mdui.Dialog('#settings-panel').close();
+    mdui.confirm('您正在清除所有书签和设置缓存', '清除数据', function () {
+      localStorage.removeItem('config');
+      window.location.reload();
+    }, null, {
+      confirmText: '确认清除',
+      cancelText: '取消',
+      history: false,
+      modal: true,
+    });
   },
   syncConfigWithCloudService(state) {
     console.log('Features in development. Config will be synced: \n' + JSON.stringify(state.config, null, 4));

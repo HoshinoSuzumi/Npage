@@ -60,7 +60,7 @@
                 删除本地所有的书签和设置缓存。如果您进行过云同步，那么这些设置可以从云端重新获取
               </div>
             </div>
-            <button class="mdui-btn mdui-ripple mdui-color-red">清除</button>
+            <button class="mdui-btn mdui-ripple mdui-color-red" @click="$store.commit('flushCache')">清除</button>
           </li>
 
         </ul>
