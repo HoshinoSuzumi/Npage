@@ -43,8 +43,8 @@
           </div>
           <div class="setting-block-actions">
             <a-switch style="margin-left: .25rem; margin-bottom: .25rem;"
-                      :defaultChecked="$store.state.config.settings['openTabNewWindow']"
-                      @change="switchChanged('openTabNewWindow', $event)"/>
+                      :defaultChecked="$store.state.config.settings['openInNewTab']"
+                      @change="switchChanged('openInNewTab', $event)"/>
           </div>
         </div>
       </div>
@@ -57,7 +57,7 @@
             <div class="mdui-list-item-content mdui-m-r-2">
               <div class="mdui-list-item-title mdui-list-item-one-line">清除数据</div>
               <div class="mdui-list-item-text">
-                删除本地所有的书签和设置缓存。如果您进行过云同步，那么这些设置可以从云端重新获取
+                删除本地所有的书签和并重置所有设置。如果您进行过云同步，那么这些数据可以从云端重新获取
               </div>
             </div>
             <button class="mdui-btn mdui-ripple mdui-color-red" @click="$store.commit('flushCache')">清除</button>

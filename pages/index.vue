@@ -41,7 +41,7 @@
                     }
                 }
                 if (kw !== null)
-                    this.$store.state.config.settings['openTabNewWindow']
+                    this.$store.state.config.settings['openInNewTab']
                         ? window.open('https://www.baidu.com/s?wd=' + kw)
                         : window.location.href = 'https://www.baidu.com/s?wd=' + kw;
             }

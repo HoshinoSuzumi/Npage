@@ -12,7 +12,7 @@ export const state = () => ({
     settings: {
       "immerseNavbar": false,
       "autoSyncConfig": false,
-      "openTabNewWindow": true,
+      "openInNewTab": true,
     },
   },
   runtime: {
@@ -55,7 +55,7 @@ export const mutations = {
   },
   flushCache(state) {
     mdui.Dialog('#settings-panel').close();
-    mdui.confirm('您正在清除所有书签和设置缓存', '清除数据', function () {
+    mdui.confirm('您正在清除所有书签和并重置设置', '清除数据', function () {
       localStorage.removeItem('config');
       window.location.reload();
     }, null, {
