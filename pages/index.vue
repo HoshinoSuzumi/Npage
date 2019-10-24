@@ -19,6 +19,7 @@
         </div>
       </ContentArea>
     </div>
+    <AddSitePanel/>
   </div>
 </template>
 
@@ -28,10 +29,11 @@
 
     import $ from 'jquery';
     import NavBar from "../components/NavBar";
+    import AddSitePanel from "../components/AddSitePanel";
 
     export default {
         name: "index",
-        components: {NavBar, Label, ContentArea},
+        components: {AddSitePanel, NavBar, Label, ContentArea},
         methods: {
             Search(kw) {
                 if (kw === null) {

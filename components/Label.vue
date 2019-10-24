@@ -14,6 +14,7 @@
 </template>
 
 <script>
+    import mdui from 'mdui';
     import $ from 'jquery';
 
     export default {
@@ -24,11 +25,14 @@
                 this.$store.state.config.settings['openInNewTab'] ? window.open(url) : window.location.href = url;
             },
             add() {
-                this.$store.commit('mkSite', {
-                    title: '0x' + new Date().getTime().toString(16).toUpperCase(),
-                    url: 'https://www.baidu.com/',
-                    color: '#3282F2'
-                })
+                let diagInst = new mdui.Dialog('#addsite-panel', {
+                    history: false,
+                    modal: true,
+                    overlay: true,
+                    closeOnConfirm: true,
+                    destroyOnClosed: true,
+                });
+                diagInst.open();
             },
             del(el) {
                 this.$store.commit('rmSite', el.target.id);

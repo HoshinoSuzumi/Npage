@@ -94,38 +94,5 @@
 </script>
 
 <style scoped>
-  .setting-block {
-    display: flex;
-    align-items: flex-start;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 1rem;
-    border: 1px solid #C8C8C8;
-    border-radius: 10px;
-    padding: 10px;
-    overflow: hidden;
-  }
 
-  .setting-block .setting-block-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-
-  .setting-block .setting-block-icon {
-    position: absolute;
-    top: 0;
-    right: 12px;
-    color: rgba(0, 0, 0, .05);
-  }
-
-  .setting-block .setting-block-icon i {
-    font-size: 5rem;
-  }
-
-  .setting-block .setting-block-actions {
-    display: block;
-    position: absolute;
-    left: 1rem;
-    bottom: 1.5rem;
-  }
 </style>

@@ -66,7 +66,7 @@ export const mutations = {
     });
   },
   syncConfigWithCloudService(state) {
-    console.log('Features in development. Config will be synced: \n' + JSON.stringify(state.config, null, 4));
+    console.log('Features in development. Config should will be synced while cloud service is ready: \n' + JSON.stringify(state.config, null, 4));
   },
   syncConfigWithLocalStorage(state, config) {
     localStorage.setItem('config', JSON.stringify(config));

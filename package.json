@@ -12,10 +12,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "ant-design-vue": "^1.1.10",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^2.6.0",
-    "nuxt": "^2.0.0"
+    "ant-design-vue": "^1.1.10",
+    "nuxt": "^2.0.0",
+    "vue-color": "^2.7.0"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.27",
