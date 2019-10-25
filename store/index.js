@@ -43,6 +43,19 @@ export const mutations = {
   updateSetting(state, data) {
     if (Object.keys(state.config.settings).indexOf(data.key) !== -1) {
       state.config.settings[data.key] = data.value;
+      const key = 'unTrustedFutureEnabled';
+      if (data.key === 'autoSyncConfig' && data.value === true) {
+        $nuxt.$notification.open({
+          key,
+          message: '注意',
+          description:
+            '您开启了未正式发布或未经调试的功能[' + data.key + ']，这些功能可能不会按照预期效果运行',
+          duration: 0,
+          placement: 'bottomRight',
+        });
+      } else if (data.key === 'autoSyncConfig' && data.value === false) {
+        $nuxt.$notification.close(key);
+      }
     } else {
       console.log('Unknown configuration item: ' + data.key);
     }
