@@ -3,7 +3,9 @@
     <div class="np-navbar-title">NPage</div>
     <div class="np-navbar-actions">
       <!--      <button class="mdui-btn" mdui-tooltip="{content: '登录以启用云同步'}">登录 / 注册</button>-->
-      <button class="mdui-btn">{{ nowTemp }}</button>
+      <button class="mdui-btn" v-if="$store.state.config.settings['showWeatherInfo']">
+        {{ nowTemp }}
+      </button>
       <button class="mdui-btn mdui-btn-icon mdui-text-color-grey-700"
               mdui-dialog="{target: '#settings-panel', 'history': false, 'modal': true, 'overlay': true}">
         <i class="mdui-icon material-icons">settings</i>

@@ -48,6 +48,21 @@
           </div>
         </div>
       </div>
+      <div class="mdui-col-xs-6">
+        <div class="setting-block">
+          <div class="setting-block-title">
+            显示天气信息
+          </div>
+          <div class="setting-block-icon">
+            <i class="mdui-icon material-icons">wb_sunny</i>
+          </div>
+          <div class="setting-block-actions">
+            <a-switch style="margin-left: .25rem; margin-bottom: .25rem;"
+                      :defaultChecked="$store.state.config.settings['showWeatherInfo']"
+                      @change="switchChanged('showWeatherInfo', $event)"/>
+          </div>
+        </div>
+      </div>
 
       <div class="mdui-col-xs-12">
         <div class="mdui-divider"></div>

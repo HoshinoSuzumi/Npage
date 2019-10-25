@@ -13,6 +13,7 @@ export const state = () => ({
       "immerseNavbar": false,
       "autoSyncConfig": false,
       "openInNewTab": true,
+      "showWeatherInfo": true,
     },
   },
   runtime: {
