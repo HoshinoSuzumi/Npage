@@ -57,7 +57,7 @@
             <div class="mdui-list-item-content mdui-m-r-2">
               <div class="mdui-list-item-title mdui-list-item-one-line">安装 PWA</div>
               <div class="mdui-list-item-text">
-                您可以将 NPage 以 PWA(渐进式网页应用程序) 的方式安装到您的设备上，实现离线和快速启动
+                您可以将 NPage 以 PWA(渐进式网页应用程序) 的方式安装到您的设备上，实现离线启动。此项只在受支持的浏览器上显示
               </div>
             </div>
             <button class="mdui-btn mdui-ripple mdui-btn-border" @click="installPWA">安装</button>
