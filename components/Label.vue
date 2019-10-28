@@ -49,6 +49,7 @@
 <style scoped>
 
   .np-label {
+    user-select: none;
     cursor: pointer;
     text-align: center;
     margin-top: 0;
