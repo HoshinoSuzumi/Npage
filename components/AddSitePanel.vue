@@ -3,13 +3,13 @@
     <div class="mdui-dialog-title">添加书签</div>
     <div class="mdui-dialog-content">
 
-      <div class="mdui-col-xs-6">
+      <div class="mdui-col-xs-12">
         <div class="mdui-textfield">
           <label class="mdui-textfield-label">站点名称</label>
           <input v-model="inputData.site" class="mdui-textfield-input" type="text"/>
         </div>
       </div>
-      <div class="mdui-col-xs-6">
+      <div class="mdui-col-xs-12">
         <div class="mdui-textfield">
           <label class="mdui-textfield-label">站点链接</label>
           <input v-model="inputData.url" class="mdui-textfield-input" type="url"/>
@@ -20,8 +20,10 @@
           <label class="mdui-textfield-label">书签颜色</label>
           <a @click="togglePicker">{{ pickerToggleTig }} >></a>
         </div>
-        <chrome-picker v-if="!simpleColorPicker" style="width: 100%;" v-model="colors"/>
-        <compact-picker v-if="simpleColorPicker" style="width: 100%;" v-model="colors"/>
+        <div>
+          <chrome-picker v-if="!simpleColorPicker" style="width: 100%;" v-model="colors"/>
+          <compact-picker v-if="simpleColorPicker" style="width: 100%;" v-model="colors"/>
+        </div>
       </div>
 
     </div>
