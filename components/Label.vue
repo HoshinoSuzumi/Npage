@@ -35,7 +35,12 @@
                 diagInst.open();
             },
             del(el) {
-                this.$store.commit('rmSite', el.target.id);
+                mdui.confirm('确定要删除书签 <b>' + el.target.id + '</b> 吗？', () => {
+                    this.$store.commit('rmSite', el.target.id)
+                }, null, {
+                    confirmText: '确认删除',
+                    cancelText: '取消',
+                });
             }
         },
         mounted() {
