@@ -57,7 +57,6 @@
         },
         mounted() {
             let self = this;
-
             $('.np-search').keypress(function (e) {
                 if (e.which === 13) {
                     self.Search($('.np-search').val());
