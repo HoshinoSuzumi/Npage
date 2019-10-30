@@ -1,8 +1,14 @@
 @import url(~/assets/css/font/poppins.css);
 
 html, body {
+  width: 100%;
+  height: 100%;
   background: #f4f8fb;
   font-family: Roboto, 'Microsoft JhengHei', sans-serif;
+}
+
+body {
+  margin: 0;
 }
 
 input::-webkit-input-placeholder {
@@ -19,6 +25,10 @@ input:-moz-placeholder {
 
 input:-ms-input-placeholder {
   color: #bfbfbf;
+}
+
+.np-addon-style {
+  opacity: .85;
 }
 
 .np-search {
@@ -114,4 +124,22 @@ input:-ms-input-placeholder {
 .mdui-btn-border {
   border: 1px solid #505050;
   border-radius: 2px;
+}
+
+.np-bg-overlay {
+  position: fixed;
+  top: -5000px;
+  right: -5000px;
+  bottom: -5000px;
+  left: -5000px;
+  z-index: 2000;
+  visibility: visible;
+  background: rgba(0, 0, 0, .4);
+  opacity: 1;
+  filter: blur(500px);
+  transition-duration: .3s;
+  transition-property: opacity, visibility;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
 }

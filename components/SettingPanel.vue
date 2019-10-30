@@ -65,7 +65,20 @@
       </div>
 
       <div class="mdui-col-xs-12">
+
+        <!--        <div class="mdui-divider"></div>-->
+
+        <!--        <ul class="mdui-list">-->
+
+        <!--          <li class="mdui-list-item">-->
+        <!--            <div class="mdui-list-item-content mdui-m-r-2">-->
+        <!--              <div class="mdui-list-item-title mdui-list-item-one-line">偏好设置</div>-->
+        <!--            </div>-->
+        <!--          </li>-->
+        <!--        </ul>-->
+
         <div class="mdui-divider"></div>
+
         <ul class="mdui-list">
 
           <li class="mdui-list-item" v-if="pwaEnabled">

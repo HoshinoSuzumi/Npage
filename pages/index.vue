@@ -1,18 +1,19 @@
 <template>
   <div>
     <NavBar/>
-    <div class="main">
+    <div class="main" :style="bgStyle">
       <ContentArea title="Search">
         <div>
           <label>
-            <input class="np-search" spellcheck="false" type="text" placeholder="Search everything" autofocus/>
+            <input class="np-search np-addon-style" spellcheck="false" type="text" placeholder="Search everything"
+                   autofocus/>
           </label>
-          <button class="np-search-btn mdui-hidden-md-up" @click="Search(null)">SEARCH</button>
+          <button class="np-search-btn mdui-hidden-md-up" @click="search(null)">SEARCH</button>
         </div>
       </ContentArea>
 
       <ContentArea title="Bookmarks">
-        <div class="websites-container mdui-container-fluid">
+        <div class="websites-container mdui-container-fluid np-addon-style">
           <Label v-for="(website, index) in $store.state.config.websites" :key="index" :title="website.title"
                  :color="website.color" :url="website.url"/>
           <Label title="" plus/>
@@ -20,6 +21,7 @@
       </ContentArea>
     </div>
     <AddSitePanel/>
+    <!--    <div class="np-bg-overlay"></div>-->
   </div>
 </template>
 
@@ -34,8 +36,15 @@
     export default {
         name: "index",
         components: {AddSitePanel, NavBar, Label, ContentArea},
+        data() {
+            return {
+                bgStyle: {
+                    // 'background-image': 'url("https://picbed-1253315888.file.myqcloud.com/images/20191030103156.jpg")'
+                },
+            }
+        },
         methods: {
-            Search(kw) {
+            search(kw) {
                 if (kw === null) {
                     let inputted = $('.np-search').val();
                     if (inputted) {
@@ -68,12 +77,19 @@
 
 <style scoped>
   .main {
-    position: relative;
+    position: absolute;
     width: 100%;
-    height: 100%;
-    top: 0;
+    height: calc(100vh - 50px);
+    top: 50px;
     left: 0;
+    right: 0;
+    bottom: 0;
     /*background: rgba(0, 196, 141, .5);*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: none;
+    background-size: cover;
   }
 
   .websites-container {
