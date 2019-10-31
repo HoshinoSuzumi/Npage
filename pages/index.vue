@@ -21,7 +21,6 @@
       </ContentArea>
     </div>
     <AddSitePanel/>
-    <!--    <div class="np-bg-overlay"></div>-->
   </div>
 </template>
 
@@ -68,7 +67,7 @@
             let self = this;
             $('.np-search').keypress(function (e) {
                 if (e.which === 13) {
-                    self.Search($('.np-search').val());
+                    self.search($('.np-search').val());
                 }
             });
         },
@@ -81,9 +80,6 @@
     width: 100%;
     height: calc(100vh - 50px);
     top: 50px;
-    left: 0;
-    right: 0;
-    bottom: 0;
     /*background: rgba(0, 196, 141, .5);*/
     background-repeat: no-repeat;
     background-position: center;
