@@ -33,6 +33,8 @@ $ npm run start
 
 * [ ] Todo list
 
+* [X] PWA 支持
+
 * [X] 天气信息
 
 * [ ] 书签和设置云同步
