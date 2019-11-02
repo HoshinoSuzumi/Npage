@@ -20,7 +20,8 @@ $ npm run start
 
 ## 预览截图
 
-暂无
+![NPage Preview](https://picbed-1253315888.file.myqcloud.com/images/NPage-Preview.png)
+![NPage_Preview](https://picbed-1253315888.file.myqcloud.com/images/NPage-Preview-1.png)
 
 ## Todo
 
