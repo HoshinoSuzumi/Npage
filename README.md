@@ -1,3 +1,5 @@
+![NPage Banner](https://picbed-1253315888.file.myqcloud.com/images/NPage-Banner.png)
+
 # NPage
 
 > 这是一个设计简约，功能多样的导航页
@@ -30,7 +32,7 @@ $ npm run start
 
 * [ ] Todo list
 
-* [ ] 天气信息
+* [X] 天气信息
 
 * [ ] 书签和设置云同步
 
